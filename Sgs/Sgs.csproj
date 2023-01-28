@@ -7,12 +7,12 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <PackageReference Include="Hangfire.AspNetCore" Version="1.8.0-rc2" />
-        <PackageReference Include="Hangfire.Core" Version="1.8.0-rc2" />
-        <PackageReference Include="Hangfire.MemoryStorage" Version="1.7.0" />
-        <PackageReference Include="Hangfire.SQLite" Version="1.4.2" />
-        <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="7.0.2" />
-        <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
+        <PackageReference Include="Hangfire.AspNetCore" Version="1.8.0-rc2"/>
+        <PackageReference Include="Hangfire.Core" Version="1.8.0-rc2"/>
+        <PackageReference Include="Hangfire.MemoryStorage" Version="1.7.0"/>
+        <PackageReference Include="Hangfire.SQLite" Version="1.4.2"/>
+        <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="7.0.2"/>
+        <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0"/>
     </ItemGroup>
 
 </Project>

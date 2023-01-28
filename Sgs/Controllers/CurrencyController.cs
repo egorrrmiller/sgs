@@ -19,7 +19,7 @@ public class CurrencyController : ControllerBase
     {
         return _currencyService.GetCurrencies(offset, count);
     }
-    
+
     [HttpGet("/currency")]
     public Dictionary<string, Currency> GetCurrency(string code)
     {

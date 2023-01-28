@@ -13,11 +13,13 @@ builder.Services.AddHangfireServer();
 builder.Services.AddScoped<ICurrencyService, CurrencyService>();
 
 builder.Services.AddControllers();
+
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
+
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
@@ -26,8 +28,8 @@ if (app.Environment.IsDevelopment())
     app.UseHangfireDashboard("/jobs");
 }
 
-await new CurrencyService().SetCurrencies();
-RecurringJob.AddOrUpdate<CurrencyService>(x => x.SetCurrencies(), Cron.Daily(11, 10));
+BackgroundJob.Enqueue(() => new CurrencyService().SetCurrencies());
+RecurringJob.AddOrUpdate<CurrencyService>(x => x.SetCurrencies(), Cron.Daily(11, 35));
 
 app.UseHttpsRedirection();
 
