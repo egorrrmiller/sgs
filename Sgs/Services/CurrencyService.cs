@@ -9,6 +9,7 @@ public class CurrencyService : ICurrencyService
 
     public Dictionary<string, Currency> GetCurrencies(int? offset, int? count)
     {
+        // comment for test
         var currency = CurrencyModel.Currencies;
         var result = currency.Skip(offset ?? 0).Take(count ?? currency.Count);
 
