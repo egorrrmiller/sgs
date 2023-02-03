@@ -17,6 +17,7 @@ public class CurrencyService : ICurrencyService
 
     public Dictionary<string, Currency> GetCurrency(string code)
     {
+        //todo ну добавил, а нахуя?
         return CurrencyModel.Currencies.Where(x => x.Key == code).ToDictionary(x => x.Key, x => x.Value);
     }
 
