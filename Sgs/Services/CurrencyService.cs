@@ -11,10 +11,8 @@ public class CurrencyService : ICurrencyService
 
     public Dictionary<string, Currency> GetCurrencies(int? offset, int? count)
     {
-        var currency = _currencies;
-        var result = currency.Skip(offset ?? 0).Take(count ?? currency.Count);
-
-        return result.ToDictionary(x => x.Key, x => x.Value);
+        return _currencies.Skip(offset ?? 0).Take(count ?? _currencies.Count)
+            .ToDictionary(x => x.Key, x => x.Value);
     }
 
     public Dictionary<string, Currency> GetCurrency(string code)
