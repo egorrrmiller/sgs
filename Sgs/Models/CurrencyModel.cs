@@ -1,10 +1,5 @@
 namespace Sgs.Models;
 
-public static class CurrencyModel
-{
-    public static Dictionary<string, Currency> Currencies;
-}
-
 public record Currency(string ID,
                        string NumCode,
                        string CharCode,
