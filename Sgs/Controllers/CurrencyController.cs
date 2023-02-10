@@ -14,9 +14,6 @@ public class CurrencyController : ControllerBase
         _currencyService = currencyService;
     }
 
-
-
-
     [HttpGet("/currencies")]
     public Dictionary<string, Currency> GetCurrencies(int? offset, int? count)
     {
